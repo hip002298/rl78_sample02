@@ -69,6 +69,7 @@ static UCHAR	ucgCNT_Cnt;
 static UCHAR	g_ucBCNT_LastCounterVal[BCNT_USED];
 static UCHAR	g_ucBCNT_LastCp0[(BCNT_USED / 8) + 1];
 static UCHAR	g_ucBCNT_LastCp1[(BCNT_USED / 8) + 1];
+UCHAR dot = 0;
 static UCHAR	g_ucBCNT_Count;
 #endif /* end of defined BCNT_USED */
 
@@ -219,6 +220,7 @@ UCHAR BCNT_Evaluate( UCHAR mr, UCHAR cp0, UCHAR cp1, UCHAR max )
 				if (lastcp1 == HIGH) {
 					/* (Count value of binary counter)++ */
 					count++;
+					dot++;
 				}
 			}
 		}
@@ -227,6 +229,7 @@ UCHAR BCNT_Evaluate( UCHAR mr, UCHAR cp0, UCHAR cp1, UCHAR max )
 				if (cp1 == HIGH) {
 					/* (Count value of binary counter)++ */
 					count++;
+					dot++;
 				}
 			}
 		}
@@ -256,6 +259,15 @@ UCHAR BCNT_Evaluate( UCHAR mr, UCHAR cp0, UCHAR cp1, UCHAR max )
 	return count;
 }
 
+UCHAR Dot_Count(void)
+{
+	if(dot >= 10){
+		return fON;
+	}else{
+		return fOFF;
+	}
+}
+	
 /*******************************************************************************
 * Function Name: BCNT_Counter
 * Description  : COUNTER Panel BCDCNT_Counter.

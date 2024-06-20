@@ -65,6 +65,7 @@ ST_DTC_DATA __near dtc_controldata[24];
 	UCHAR F0919 = 0;
 	UCHAR F0920 = 0;
 	UCHAR F1321 = 0;
+	UCHAR flag;
 
 /*----------------------------*/
 
@@ -81,6 +82,7 @@ void panel(void)
 	DGIN_INIT;
 	BCNT_INIT;
 	IC74HC4511_INIT;
+	flag = Dot_Count();
 
 	DGIN_PROC( I_18,0, LOW,0,fTrg10ms);
 	BCNT_PROC( 9,fOFF,fOFF,I_18,F0617,F0618,F0619,F0620 );
@@ -92,5 +94,5 @@ void panel(void)
 	DGOUT_PROC( 51, F0918, HIGH );
 	DGOUT_PROC( 52, F0919, HIGH );
 	DGOUT_PROC( 53, F0920, HIGH );
-	DGOUT_PROC( 54, fOFF, HIGH );
+	DGOUT_PROC( 54, flag, HIGH );
 }

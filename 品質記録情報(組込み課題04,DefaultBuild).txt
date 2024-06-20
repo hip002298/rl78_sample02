@@ -1,5 +1,5 @@
 品質記録情報
-2024年6月20日 9:30:24
+2024年6月20日 9:31:23
 
 ------ ビルド開始(組込み課題03, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\Bin\ccrl.exe src\panel.c -cpu=S3 -obj_path=DefaultBuild "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F1058A.DVF" -g -g_line -Osize -I include -c -msg_lang=japanese
@@ -9,6 +9,10 @@ W0561018:The evaluation period of CC-RL V1 is valid for the remaining 52 days. A
 W0561018:The evaluation period of CC-RL V1 is valid for the remaining 52 days. After that, functional limit will be applied. Please consider purchasing the product.
 Renesas Optimizing Linker Completed
 ------ ビルド終了(エラー:0個, 警告:3個)(組込み課題03, DefaultBuild) ------
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\Bin\rlink.exe -subcommand=DefaultBuild\組込み課題04.clnk
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 52 days. After that, functional limit will be applied. Please consider purchasing the product.
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 52 days. After that, functional limit will be applied. Please consider purchasing the product.
+Renesas Optimizing Linker Completed
 
 --- CommandFile 1 ---
 DefaultBuild\組込み課題03.clnk :
@@ -51,10 +55,51 @@ DefaultBuild\組込み課題03.clnk :
 -NOMessage
 -exit
 
+--- CommandFile 2 ---
+DefaultBuild\組込み課題04.clnk :
+-Input=DefaultBuild\main.obj
+-Input=DefaultBuild\common.obj
+-Input=DefaultBuild\timer.obj
+-Input=DefaultBuild\int.obj
+-Input=DefaultBuild\port.obj
+-Input=DefaultBuild\watchdogtimer.obj
+-Input=DefaultBuild\system.obj
+-Input=DefaultBuild\systeminit.obj
+-Input=DefaultBuild\panel.obj
+-Input=DefaultBuild\digitalio.obj
+-Input=DefaultBuild\counter.obj
+-Input=DefaultBuild\74hc.obj
+-Input=DefaultBuild\cstart.obj
+-Input=DefaultBuild\opt_byte.obj
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F1058A.DVF
+-DEBug
+-NOCOmpress
+-NOOPtimize
+-OUtput=DefaultBuild\組込み課題04.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\rl78em4r.lib
+-DEBUG_MONITOR
+-LISt=DefaultBuild\組込み課題04.map
+-AUTO_SECTION_LAYOUT
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-MEMory=High
+-NOLOgo
+-end
+-Input=DefaultBuild\組込み課題04.abs
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F1058A.DVF
+-OUtput=DefaultBuild\組込み課題04.hex
+-FOrm=Hexadecimal
+-NOMessage
+-exit
+
 
 --- SHA1 hash value of output files ---
-Z:\研修\実習\組込み\組込み実習\RL78_Sample2\rl78_sample02\DefaultBuild\組込み課題03.abs: 82463998cf5b6b025993e94d7041d6716b788bec
-Z:\研修\実習\組込み\組込み実習\RL78_Sample2\rl78_sample02\DefaultBuild\組込み課題03.hex: 8d33a2ca21e24a11a203dc2f830b17d1ef64e44d
+Z:\研修\実習\組込み\組込み実習\RL78_Sample2\rl78_sample02\DefaultBuild\組込み課題04.abs: 82463998cf5b6b025993e94d7041d6716b788bec
+Z:\研修\実習\組込み\組込み実習\RL78_Sample2\rl78_sample02\DefaultBuild\組込み課題04.hex: 8d33a2ca21e24a11a203dc2f830b17d1ef64e44d
 
 
 --- システム情報 ---
@@ -82,13 +127,13 @@ Z:\研修\実習\組込み\組込み実習\RL78_Sample2\rl78_sample02\DefaultBui
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  343 MB
+  361 MB
  *GDIオブジェクト数
-  2261
+  2283
  *USERオブジェクト数
-  1647
+  1665
  *開いているファイル
-  4 editors, 4 files, 24 KB
+  5 editors, 5 files, 32 KB
 
 --- ビルド・ツール・プラグイン情報 ---
 RH850ビルド・ツールCC-RH用プラグイン
@@ -224,7 +269,7 @@ IronPythonコンソール・プラグイン
   DeviceInformation.dll
 
 --- メイン・プロジェクト情報 ---
-Z:\研修\実習\組込み\組込み実習\RL78_Sample2\rl78_sample02\組込み課題03.mtpj
+Z:\研修\実習\組込み\組込み実習\RL78_Sample2\rl78_sample02\組込み課題04.mtpj
 マイクロコントローラ情報
  *R5F1058A
   *ファイル名: バージョン
