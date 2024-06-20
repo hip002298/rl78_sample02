@@ -70,6 +70,7 @@ static UCHAR	g_ucBCNT_LastCounterVal[BCNT_USED];
 static UCHAR	g_ucBCNT_LastCp0[(BCNT_USED / 8) + 1];
 static UCHAR	g_ucBCNT_LastCp1[(BCNT_USED / 8) + 1];
 UCHAR dot = 0;
+UCHAR i = 0;
 static UCHAR	g_ucBCNT_Count;
 #endif /* end of defined BCNT_USED */
 
@@ -261,10 +262,17 @@ UCHAR BCNT_Evaluate( UCHAR mr, UCHAR cp0, UCHAR cp1, UCHAR max )
 
 UCHAR Dot_Count(void)
 {
-	if(dot >= 10){
-		return fON;
-	}else{
-		return fOFF;
+	for(i = 0; i < 1000; i++){
+		if(i == 500){
+			i = 0;
+		}
+		
+		if(20 * i + 10 <= dot && dot <= 20 * i + 19){
+			return fON;
+		}else if(20 * i <= dot && dot <= 20 * i + 9){
+			return fOFF;
+		}else{
+		}
 	}
 }
 	
