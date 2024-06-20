@@ -1,8 +1,8 @@
-Renesas Optimizing Linker (W3.06.00 )             20-Jun-2024 09:48:47
+Renesas Optimizing Linker (W3.06.00 )             20-Jun-2024 09:49:47
 
 *** Options ***
 
--subcommand=DefaultBuild\組込み課題05.clnk
+-subcommand=DefaultBuild\組込み課題06.clnk
 -Input=DefaultBuild\main.obj
 -Input=DefaultBuild\common.obj
 -Input=DefaultBuild\timer.obj
@@ -22,12 +22,12 @@ Renesas Optimizing Linker (W3.06.00 )             20-Jun-2024 09:48:47
 -DEBug
 -NOCOmpress
 -NOOPtimize
--OUtput=DefaultBuild\組込み課題05.abs
+-OUtput=DefaultBuild\組込み課題06.abs
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\rl78em4s.lib
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\malloc_n.lib
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\rl78em4r.lib
 -DEBUG_MONITOR
--LISt=DefaultBuild\組込み課題05.map
+-LISt=DefaultBuild\組込み課題06.map
 -AUTO_SECTION_LAYOUT
 -ROm=.data=.dataR
 -ROm=.sdata=.sdataR
